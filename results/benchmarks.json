@@ -200,6 +200,98 @@
         "version": "fa33f32dc52b29c7d15644fc09b82fa83412d56629204948b3a5291eb4d299d7",
         "warmup_time": -1
     },
+    "time_sims_experiments.TimeDFNSimulationCCCV.time_setup_SPM_simulation": {
+        "code": "class TimeDFNSimulationCCCV:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+        "min_run_count": 2,
+        "name": "time_sims_experiments.TimeDFNSimulationCCCV.time_setup_SPM_simulation",
+        "number": 0,
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "7e4387abb5f304cc68a600e04d30ef7f12914faf5687f08ebcd6c2c62896729f",
+        "warmup_time": -1
+    },
+    "time_sims_experiments.TimeDFNSimulationGITT.time_setup_SPM_simulation": {
+        "code": "class TimeDFNSimulationGITT:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+        "min_run_count": 2,
+        "name": "time_sims_experiments.TimeDFNSimulationGITT.time_setup_SPM_simulation",
+        "number": 0,
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "58732c51d255c37f8c0c77d0003f8f1f4cf0e570484caa9c291bb84c28141959",
+        "warmup_time": -1
+    },
+    "time_sims_experiments.TimeSPMSimulationCCCV.time_setup_SPM_simulation": {
+        "code": "class TimeSPMSimulationCCCV:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+        "min_run_count": 2,
+        "name": "time_sims_experiments.TimeSPMSimulationCCCV.time_setup_SPM_simulation",
+        "number": 0,
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "8001bf4564507e1181c424495e2efd5bec0f190db2ab38cb2d451b73f7f08d29",
+        "warmup_time": -1
+    },
+    "time_sims_experiments.TimeSPMSimulationGITT.time_setup_SPM_simulation": {
+        "code": "class TimeSPMSimulationGITT:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+        "min_run_count": 2,
+        "name": "time_sims_experiments.TimeSPMSimulationGITT.time_setup_SPM_simulation",
+        "number": 0,
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "4efc5d800e3e1f9f99ee0faf2d8d4fedde6e94844f8288b42f535ee4cea0e201",
+        "warmup_time": -1
+    },
     "time_solve_models.TimeSolveDFN.time_solve_model": {
         "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters):\n        TimeSolveDFN.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters):\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, TimeSolveDFN.solver, self.t_eval)",
         "min_run_count": 2,
