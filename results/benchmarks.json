@@ -1,4 +1,112 @@
 {
+    "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV": {
+        "code": "class MemDFNSimulationCCCV:\n    def mem_setup_DFN_simulationCCCV(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "name": "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV",
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "dcfa286e2ee441d8889df80a96e4bc08a19dce1b0dcc06cff67db8871dde214c"
+    },
+    "memory_sims.MemDFNSimulationGITT.mem_setup_DFN_simulationGITT": {
+        "code": "class MemDFNSimulationGITT:\n    def mem_setup_DFN_simulationGITT(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "name": "memory_sims.MemDFNSimulationGITT.mem_setup_DFN_simulationGITT",
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "19cf3b39382834a8cb86fab71ae7457cb9784ff4be59085c9fbef9fef541601f"
+    },
+    "memory_sims.MemSPMSimulationCCCV.mem_setup_SPM_simulationCCCV": {
+        "code": "class MemSPMSimulationCCCV:\n    def mem_setup_SPM_simulationCCCV(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "name": "memory_sims.MemSPMSimulationCCCV.mem_setup_SPM_simulationCCCV",
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "4d487b81ebe806e06b74c7e8a4e5adf7d2d193a65b9904033b32df9b546a400b"
+    },
+    "memory_sims.MemSPMSimulationGITT.mem_setup_SPM_simulationGITT": {
+        "code": "class MemSPMSimulationGITT:\n    def mem_setup_SPM_simulationGITT(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "name": "memory_sims.MemSPMSimulationGITT.mem_setup_SPM_simulationGITT",
+        "param_names": [
+            "parameter"
+        ],
+        "params": [
+            [
+                "'Marquis2019'",
+                "'Chen2020'"
+            ]
+        ],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "e795149bf5ef6de3f6a22e7aae87dee586fcfb2ad48f5567048499f946f84f6e"
+    },
+    "memory_unit_benchmarks.MemCreateExpression.mem_create_expression": {
+        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model",
+        "name": "memory_unit_benchmarks.MemCreateExpression.mem_create_expression",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "051d7dd69db532340a54137adc47187cb7fc1788330eeb474f50641a2202c9ff"
+    },
+    "memory_unit_benchmarks.MemDiscretiseModel.mem_discretise": {
+        "code": "class MemDiscretiseModel:\n    def mem_discretise(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n        return disc\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)",
+        "name": "memory_unit_benchmarks.MemDiscretiseModel.mem_discretise",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "161d1e865768e388bedfc8f24eec7c376ac9fef84acf0bdbcdaa583aca95ab68"
+    },
+    "memory_unit_benchmarks.MemParameteriseModel.mem_parameterise": {
+        "code": "class MemParameteriseModel:\n    def mem_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n        return param\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)",
+        "name": "memory_unit_benchmarks.MemParameteriseModel.mem_parameterise",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "d219da44966aae64a4ce98e5cfde0a0acedae4fdac3bcff12064b8d77fc7ef1a"
+    },
+    "memory_unit_benchmarks.MemSolveModel.mem_solve": {
+        "code": "class MemSolveModel:\n    def mem_solve(self):\n        solver = pybamm.ScipySolver()\n        t = np.linspace(0, 3600, 600)\n        solver.solve(self.model, t)\n        return solver\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
+        "name": "memory_unit_benchmarks.MemSolveModel.mem_solve",
+        "param_names": [],
+        "params": [],
+        "timeout": 60.0,
+        "type": "memory",
+        "unit": "bytes",
+        "version": "0098dfcd1304100f58897a06d62ad61d924a646365de3706e91294f8d89943d3"
+    },
     "time_setup_models_and_sims.TimeBuildDFN.time_setup_DFN": {
         "code": "class TimeBuildDFN:\n    def time_setup_DFN(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)",
         "min_run_count": 2,
