@@ -1,4 +1,368 @@
 {
+    "different_model_options.TimeBuildModelLithiumPlating.time_setup_model": {
+        "code": "class TimeBuildModelLithiumPlating:\n    def time_setup_model(self, model, params):\n        build_model(\"OKane2022\", model, \"lithium plating\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelLithiumPlating.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'irreversible'",
+                "'reversible'",
+                "'partially reversible'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "9f3dfe67f8a8a4383ed41454515e96f36fbd859c7a8c86ee1b80ed0fe446c02c",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model": {
+        "code": "class TimeBuildModelLossActiveMaterial:\n    def time_setup_model(self, model, params):\n    \n        build_model(\"Ai2020\", model, \"loss of active material\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'stress-driven'",
+                "'reaction-driven'",
+                "'stress and reaction-driven'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "2db0055e0215cd66607a451cf008fa04ef4e4862f606e82fe176f0f3e78e9e2e",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeBuildModelParticle.time_setup_model": {
+        "code": "class TimeBuildModelParticle:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"particle\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelParticle.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'Fickian diffusion'",
+                "'uniform profile'",
+                "'quadratic profile'",
+                "'quartic profile'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "c32b56d8b7abd0d68c004e6e8fbe9de0acd1d71b5b0d0b1682f648bc8a39b391",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeBuildModelSEI.time_setup_model": {
+        "code": "class TimeBuildModelSEI:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"SEI\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelSEI.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'constant'",
+                "'reaction limited'",
+                "'solvent-diffusion limited'",
+                "'electron-migration limited'",
+                "'interstitial-diffusion limited'",
+                "'ec reaction limited'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "d712bc9a59370612798cbb7043cd2ef7477b9ee7df0546cac38242bd598ca18d",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeBuildModelSurfaceForm.time_setup_model": {
+        "code": "class TimeBuildModelSurfaceForm:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"surface form\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelSurfaceForm.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'false'",
+                "'differential'",
+                "'algebraic'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "1aa4c86af11cae5b0d40de18d782c6556c39a2c3b4359e25a29b0ff8bfce3de2",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeBuildModelThermal.time_setup_model": {
+        "code": "class TimeBuildModelThermal:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"thermal\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeBuildModelThermal.time_setup_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'isothermal'",
+                "'lumped'",
+                "'x-lumped'",
+                "'x-full'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "498f169375ada7271622b725ddc648abd90553aa621b17a11893b6fbcf1a3c7f",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveLithiumPlating.time_solve_model": {
+        "code": "class TimeSolveLithiumPlating:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"OKane2020\", model, \"lithium plating\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveLithiumPlating.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'irreversible'",
+                "'reversible'",
+                "'partially reversible'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "652cb37de60619eb971c2a66167bf46d2412c3203420ca91effdec9b0f956088",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveLossActiveMaterial.time_solve_model": {
+        "code": "class TimeSolveLossActiveMaterial:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Ai2020\", model, \"loss of active material\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveLossActiveMaterial.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'stress-driven'",
+                "'reaction-driven'",
+                "'stress and reaction-driven'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "30501d951c14db6db88d6ee99d9f8d1e4bbb5fe31db5479a5b995a782e6828cd",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveParticle.time_solve_model": {
+        "code": "class TimeSolveParticle:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"particle\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveParticle.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'Fickian diffusion'",
+                "'uniform profile'",
+                "'quadratic profile'",
+                "'quartic profile'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "93ea6f34a2a825e9cc230a45b9b65fa3e2c5832961c8c4b8510abf7b7c0b8af4",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveSEI.time_solve_model": {
+        "code": "class TimeSolveSEI:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"SEI\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveSEI.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'none'",
+                "'constant'",
+                "'reaction limited'",
+                "'solvent-diffusion limited'",
+                "'electron-migration limited'",
+                "'interstitial-diffusion limited'",
+                "'ec reaction limited'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "8d3c1bbea095fb981afa4e1439941d0305ab8ad6fb73ea2b7c0cc7ec76dd8cb4",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveSurfaceForm.time_solve_model": {
+        "code": "class TimeSolveSurfaceForm:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"surface form\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveSurfaceForm.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'false'",
+                "'differential'",
+                "'algebraic'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "64e1faf667009015880f9b248eea4032a29482f0e7fca35a438768fd0834a6e4",
+        "warmup_time": -1
+    },
+    "different_model_options.TimeSolveThermal.time_solve_model": {
+        "code": "class TimeSolveThermal:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"thermal\", params)",
+        "min_run_count": 2,
+        "name": "different_model_options.TimeSolveThermal.time_solve_model",
+        "number": 0,
+        "param_names": [
+            "model",
+            "model option"
+        ],
+        "params": [
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "'isothermal'",
+                "'lumped'",
+                "'x-lumped'",
+                "'x-full'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds",
+        "version": "9578b548c24e5b08b4ac43337d04e92274bedefb3ec3d316b6f3899dd62d6d97",
+        "warmup_time": -1
+    },
     "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV": {
         "code": "class MemDFNSimulationCCCV:\n    def mem_setup_DFN_simulationCCCV(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
         "name": "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV",
