@@ -1,1 +1,1 @@
-{"regressions": [["time_solve_models.TimeSolveDFN.time_solve_model(True, 'ORegan2022')", "graphs/branch-develop/machine-GitHubRunner/python-3.8/time_solve_models.TimeSolveDFN.time_solve_model.json", {}, 9, 3.973472263000019, 2.6192708885000684, [[11475, 11494, 3.6185198890000265, 3.973472263000019]]]]}
+{"regressions": []}
