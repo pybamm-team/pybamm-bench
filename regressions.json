@@ -1,1 +1,1 @@
-{"regressions": []}
+{"regressions": [["time_solve_models.TimeSolveSPM.time_solve_model(False, 'Ramadass2004')", "graphs/branch-develop/machine-GitHubRunner/python-3.8/time_solve_models.TimeSolveSPM.time_solve_model.json", {}, 4, 0.030331858499948794, 0.020009218250010008, [[11392, 11410, 0.020009218250010008, 0.030331858499948794]]]]}
