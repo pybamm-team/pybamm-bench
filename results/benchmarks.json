@@ -107,10 +107,12 @@
                 "'none'",
                 "'constant'",
                 "'reaction limited'",
+                "'reaction limited (asymmetric)'",
                 "'solvent-diffusion limited'",
                 "'electron-migration limited'",
                 "'interstitial-diffusion limited'",
-                "'ec reaction limited'"
+                "'ec reaction limited'",
+                "'ec reaction limited (asymmetric)'"
             ]
         ],
         "repeat": 0,
@@ -289,10 +291,12 @@
                 "'none'",
                 "'constant'",
                 "'reaction limited'",
+                "'reaction limited (asymmetric)'",
                 "'solvent-diffusion limited'",
                 "'electron-migration limited'",
                 "'interstitial-diffusion limited'",
-                "'ec reaction limited'"
+                "'ec reaction limited'",
+                "'ec reaction limited (asymmetric)'"
             ]
         ],
         "repeat": 0,
