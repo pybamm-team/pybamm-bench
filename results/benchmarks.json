@@ -30,7 +30,7 @@
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model": {
-        "code": "class TimeBuildModelLossActiveMaterial:\n    def time_setup_model(self, model, params):\n    \n        build_model(\"Ai2020\", model, \"loss of active material\", params)",
+        "code": "class TimeBuildModelLossActiveMaterial:\n    def time_setup_model(self, model, params):\n        build_model(\"Ai2020\", model, \"loss of active material\", params)",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model",
         "number": 0,
@@ -56,7 +56,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "2db0055e0215cd66607a451cf008fa04ef4e4862f606e82fe176f0f3e78e9e2e",
+        "version": "92f39a892bcc5c7db147e87ef2cdd1a8fbfbb90ed1ee5a8907203ba6c7d2aecf",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelParticle.time_setup_model": {
@@ -107,12 +107,10 @@
                 "'none'",
                 "'constant'",
                 "'reaction limited'",
-                "'reaction limited (asymmetric)'",
                 "'solvent-diffusion limited'",
                 "'electron-migration limited'",
                 "'interstitial-diffusion limited'",
-                "'ec reaction limited'",
-                "'ec reaction limited (asymmetric)'"
+                "'ec reaction limited'"
             ]
         ],
         "repeat": 0,
@@ -184,13 +182,14 @@
         "warmup_time": -1
     },
     "different_model_options.TimeSolveLithiumPlating.time_solve_model": {
-        "code": "class TimeSolveLithiumPlating:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"OKane2020\", model, \"lithium plating\", params)",
+        "code": "class TimeSolveLithiumPlating:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"OKane2022\", model, \"lithium plating\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveLithiumPlating.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -202,6 +201,10 @@
                 "'irreversible'",
                 "'reversible'",
                 "'partially reversible'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -210,17 +213,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "652cb37de60619eb971c2a66167bf46d2412c3203420ca91effdec9b0f956088",
+        "version": "a7e921423ff12485f9191cadd13947c31710cf832f17da13ad68c5de2d0602ae",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveLossActiveMaterial.time_solve_model": {
-        "code": "class TimeSolveLossActiveMaterial:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Ai2020\", model, \"loss of active material\", params)",
+        "code": "class TimeSolveLossActiveMaterial:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Ai2020\", model, \"loss of active material\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveLossActiveMaterial.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -232,6 +236,10 @@
                 "'stress-driven'",
                 "'reaction-driven'",
                 "'stress and reaction-driven'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -240,17 +248,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "30501d951c14db6db88d6ee99d9f8d1e4bbb5fe31db5479a5b995a782e6828cd",
+        "version": "c1dff76d9e08da716685373107680084f50ebfb24c147064023ae3dacb502e06",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveParticle.time_solve_model": {
-        "code": "class TimeSolveParticle:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"particle\", params)",
+        "code": "class TimeSolveParticle:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"particle\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveParticle.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -262,6 +271,10 @@
                 "'uniform profile'",
                 "'quadratic profile'",
                 "'quartic profile'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -270,17 +283,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "93ea6f34a2a825e9cc230a45b9b65fa3e2c5832961c8c4b8510abf7b7c0b8af4",
+        "version": "ac0ac4e14582d06dfa824e725b3727a5180a44001c838a983c6c41458c0f1027",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveSEI.time_solve_model": {
-        "code": "class TimeSolveSEI:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"SEI\", params)",
+        "code": "class TimeSolveSEI:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"SEI\", params, solver_class)",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveSEI.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -291,12 +305,14 @@
                 "'none'",
                 "'constant'",
                 "'reaction limited'",
-                "'reaction limited (asymmetric)'",
                 "'solvent-diffusion limited'",
                 "'electron-migration limited'",
                 "'interstitial-diffusion limited'",
-                "'ec reaction limited'",
-                "'ec reaction limited (asymmetric)'"
+                "'ec reaction limited'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -305,17 +321,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "8d3c1bbea095fb981afa4e1439941d0305ab8ad6fb73ea2b7c0cc7ec76dd8cb4",
+        "version": "ae8aaf2c307ac32961fa5042f713258828cc71346da90c2364f4adb7320b2c2e",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveSurfaceForm.time_solve_model": {
-        "code": "class TimeSolveSurfaceForm:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"surface form\", params)",
+        "code": "class TimeSolveSurfaceForm:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        if (model, params, solver_class) == (\n            pybamm.lithium_ion.SPM,\n            \"differential\",\n            pybamm.IDAKLUSolver,\n        ):\n            raise NotImplementedError\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"surface form\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveSurfaceForm.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -326,6 +343,10 @@
                 "'false'",
                 "'differential'",
                 "'algebraic'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -334,17 +355,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "64e1faf667009015880f9b248eea4032a29482f0e7fca35a438768fd0834a6e4",
+        "version": "b284405e56214e750ff79f8a73ba2af17787ac9f6621fceb93eabd94f54146d8",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveThermal.time_solve_model": {
-        "code": "class TimeSolveThermal:\n    def time_solve_model(self, model, params):\n        SolveModel.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"thermal\", params)",
+        "code": "class TimeSolveThermal:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"thermal\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveThermal.time_solve_model",
         "number": 0,
         "param_names": [
             "model",
-            "model option"
+            "model option",
+            "solver class"
         ],
         "params": [
             [
@@ -356,6 +378,10 @@
                 "'lumped'",
                 "'x-lumped'",
                 "'x-full'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -364,7 +390,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "9578b548c24e5b08b4ac43337d04e92274bedefb3ec3d316b6f3899dd62d6d97",
+        "version": "e13856f7f828f5e2f68e83317010aca0c728a0fbb5fb953b73da8739b742a12a",
         "warmup_time": -1
     },
     "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV": {
@@ -493,7 +519,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -529,7 +555,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -560,7 +586,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -596,7 +622,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -627,7 +653,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -663,7 +689,7 @@
                 "'Ramadass2004'",
                 "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
+                "'OKane2022'",
                 "'Ecker2015'"
             ]
         ],
@@ -676,18 +702,33 @@
         "version": "fa33f32dc52b29c7d15644fc09b82fa83412d56629204948b3a5291eb4d299d7",
         "warmup_time": -1
     },
-    "time_sims_experiments.TimeDFNSimulationCCCV.time_setup_SPM_simulation": {
-        "code": "class TimeDFNSimulationCCCV:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+    "time_sims_experiments.TimeSimulation.time_setup": {
+        "code": "class TimeSimulation:\n    def time_setup(self, experiment, parameters, model_class, solver_class):\n        param = pybamm.ParameterValues(parameters)\n        model = model_class()\n        solver = solver_class()\n        exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        pybamm.Simulation(model, parameter_values=param, experiment=exp, solver=solver)\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
         "min_run_count": 2,
-        "name": "time_sims_experiments.TimeDFNSimulationCCCV.time_setup_SPM_simulation",
+        "name": "time_sims_experiments.TimeSimulation.time_setup",
         "number": 0,
         "param_names": [
-            "parameter"
+            "experiment",
+            "parameter",
+            "model_class",
+            "solver_class"
         ],
         "params": [
             [
+                "'CCCV'",
+                "'GITT'"
+            ],
+            [
                 "'Marquis2019'",
                 "'Chen2020'"
+            ],
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -696,21 +737,36 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "7e4387abb5f304cc68a600e04d30ef7f12914faf5687f08ebcd6c2c62896729f",
+        "version": "70bb63e00480334e8fb1ebab75ebd483d2e781180b0c106d2217583902b2f268",
         "warmup_time": -1
     },
-    "time_sims_experiments.TimeDFNSimulationGITT.time_setup_SPM_simulation": {
-        "code": "class TimeDFNSimulationGITT:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
+    "time_sims_experiments.TimeSimulation.time_solve": {
+        "code": "class TimeSimulation:\n    def time_solve(self, experiment, parameters, model_class, solver_class):\n        self.sim.solve()\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
         "min_run_count": 2,
-        "name": "time_sims_experiments.TimeDFNSimulationGITT.time_setup_SPM_simulation",
+        "name": "time_sims_experiments.TimeSimulation.time_solve",
         "number": 0,
         "param_names": [
-            "parameter"
+            "experiment",
+            "parameter",
+            "model_class",
+            "solver_class"
         ],
         "params": [
             [
+                "'CCCV'",
+                "'GITT'"
+            ],
+            [
                 "'Marquis2019'",
                 "'Chen2020'"
+            ],
+            [
+                "<class 'pybamm.models.full_battery_models.lithium_ion.spm.SPM'>",
+                "<class 'pybamm.models.full_battery_models.lithium_ion.dfn.DFN'>"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -719,63 +775,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "58732c51d255c37f8c0c77d0003f8f1f4cf0e570484caa9c291bb84c28141959",
-        "warmup_time": -1
-    },
-    "time_sims_experiments.TimeSPMSimulationCCCV.time_setup_SPM_simulation": {
-        "code": "class TimeSPMSimulationCCCV:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
-        "min_run_count": 2,
-        "name": "time_sims_experiments.TimeSPMSimulationCCCV.time_setup_SPM_simulation",
-        "number": 0,
-        "param_names": [
-            "parameter"
-        ],
-        "params": [
-            [
-                "'Marquis2019'",
-                "'Chen2020'"
-            ]
-        ],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 60.0,
-        "type": "time",
-        "unit": "seconds",
-        "version": "8001bf4564507e1181c424495e2efd5bec0f190db2ab38cb2d451b73f7f08d29",
-        "warmup_time": -1
-    },
-    "time_sims_experiments.TimeSPMSimulationGITT.time_setup_SPM_simulation": {
-        "code": "class TimeSPMSimulationGITT:\n    def time_setup_SPM_simulation(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)",
-        "min_run_count": 2,
-        "name": "time_sims_experiments.TimeSPMSimulationGITT.time_setup_SPM_simulation",
-        "number": 0,
-        "param_names": [
-            "parameter"
-        ],
-        "params": [
-            [
-                "'Marquis2019'",
-                "'Chen2020'"
-            ]
-        ],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "timeout": 60.0,
-        "type": "time",
-        "unit": "seconds",
-        "version": "4efc5d800e3e1f9f99ee0faf2d8d4fedde6e94844f8288b42f535ee4cea0e201",
+        "version": "5581bd492a800415d9c6a1a381d87fcbc56564996b9d82ebe0f0c9b7518cc948",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveDFN.time_solve_model": {
-        "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters):\n        TimeSolveDFN.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters):\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, TimeSolveDFN.solver, self.t_eval)",
+        "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        if (solve_first, parameters, solver_class) == (\n            True,\n            \"ORegan2022\",\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveDFN.time_solve_model",
         "number": 0,
         "param_names": [
             "solve first",
-            "parameter"
+            "parameter",
+            "solver_class"
         ],
         "params": [
             [
@@ -789,8 +800,11 @@
                 "'Ai2020'",
                 "'Ramadass2004'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
                 "'Ecker2015'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -799,17 +813,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "3ff029f6adf4e390fcd37631c5425e0c03adfa7e8e95716a558ea7b55c51db50",
+        "version": "e04aa67d66bc75c0fafc30c9677201f1685f7e5e54826b8210cd7601d6bf485e",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveSPM.time_solve_model": {
-        "code": "class TimeSolveSPM:\n    def time_solve_model(self, solve_first, parameters):\n        TimeSolveSPM.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters):\n        self.model = pybamm.lithium_ion.SPM()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, TimeSolveSPM.solver, self.t_eval)",
+        "code": "class TimeSolveSPM:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPM()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveSPM.time_solve_model",
         "number": 0,
         "param_names": [
             "solve first",
-            "parameter"
+            "parameter",
+            "solver_class"
         ],
         "params": [
             [
@@ -822,10 +837,12 @@
                 "'NCA_Kim2011'",
                 "'Prada2013'",
                 "'Ramadass2004'",
-                "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
                 "'Ecker2015'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -834,17 +851,18 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "69b39de79a797e3494d3a9dcc28565a5e445f32a08fbf809f39ccde835854b13",
+        "version": "585652f5d88e12033cb4a7e8624f0289ddbc9e33d255c8022ff613a2e1acdf74",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveSPMe.time_solve_model": {
-        "code": "class TimeSolveSPMe:\n    def time_solve_model(self, solve_first, parameters):\n        TimeSolveSPMe.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters):\n        self.model = pybamm.lithium_ion.SPMe()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, TimeSolveSPMe.solver, self.t_eval)",
+        "code": "class TimeSolveSPMe:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPMe()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveSPMe.time_solve_model",
         "number": 0,
         "param_names": [
             "solve first",
-            "parameter"
+            "parameter",
+            "solver_class"
         ],
         "params": [
             [
@@ -857,10 +875,12 @@
                 "'NCA_Kim2011'",
                 "'Prada2013'",
                 "'Ramadass2004'",
-                "'Mohtat2020'",
                 "'Chen2020'",
-                "'Chen2020_plating'",
                 "'Ecker2015'"
+            ],
+            [
+                "<class 'pybamm.solvers.casadi_solver.CasadiSolver'>",
+                "<class 'pybamm.solvers.idaklu_solver.IDAKLUSolver'>"
             ]
         ],
         "repeat": 0,
@@ -869,7 +889,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "c9d4e016be902ab3ca8ca890b333d1a130170e5c33d92404ac0d9c6bc28a29b5",
+        "version": "29fa52398e50081bc33cbf7c010649649e82aa3b26e967430dba19d70ca80712",
         "warmup_time": -1
     },
     "unit_benchmarks.TimeCreateExpression.time_create_expression": {
