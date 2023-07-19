@@ -779,7 +779,7 @@
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveDFN.time_solve_model": {
-        "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        if (solve_first, parameters, solver_class) == (\n            True,\n            \"ORegan2022\",\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
+        "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        if (parameters, solver_class) == (\n            \"ORegan2022\",\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveDFN.time_solve_model",
         "number": 0,
@@ -813,7 +813,7 @@
         "timeout": 60.0,
         "type": "time",
         "unit": "seconds",
-        "version": "e04aa67d66bc75c0fafc30c9677201f1685f7e5e54826b8210cd7601d6bf485e",
+        "version": "2f249ee7769f90524c47792571e7fe7ffdbef508d9090cc00ede84a16dc8d177",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveSPM.time_solve_model": {
