@@ -1,6 +1,6 @@
 {
     "different_model_options.TimeBuildModelLithiumPlating.time_setup_model": {
-        "code": "class TimeBuildModelLithiumPlating:\n    def time_setup_model(self, model, params):\n        build_model(\"OKane2022\", model, \"lithium plating\", params)",
+        "code": "class TimeBuildModelLithiumPlating:\n    def time_setup_model(self, model, params):\n        build_model(\"OKane2022\", model, \"lithium plating\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelLithiumPlating.time_setup_model",
         "number": 0,
@@ -25,11 +25,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "9f3dfe67f8a8a4383ed41454515e96f36fbd859c7a8c86ee1b80ed0fe446c02c",
+        "version": "b7715f9cd1f28f249a74a4036dff5452cde2f077c92024efae0ebb5545c3edc0",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model": {
-        "code": "class TimeBuildModelLossActiveMaterial:\n    def time_setup_model(self, model, params):\n        build_model(\"Ai2020\", model, \"loss of active material\", params)",
+        "code": "class TimeBuildModelLossActiveMaterial:\n    def time_setup_model(self, model, params):\n        build_model(\"Ai2020\", model, \"loss of active material\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelLossActiveMaterial.time_setup_model",
         "number": 0,
@@ -54,11 +54,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "92f39a892bcc5c7db147e87ef2cdd1a8fbfbb90ed1ee5a8907203ba6c7d2aecf",
+        "version": "478c22dec000f10359afc36541c1e78f5e93eaaddf53c542d8b86433b7bb0faa",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelParticle.time_setup_model": {
-        "code": "class TimeBuildModelParticle:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"particle\", params)",
+        "code": "class TimeBuildModelParticle:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"particle\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelParticle.time_setup_model",
         "number": 0,
@@ -83,11 +83,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "c32b56d8b7abd0d68c004e6e8fbe9de0acd1d71b5b0d0b1682f648bc8a39b391",
+        "version": "7a2b728d79432d8ed22c8c8680ee758da0ceffe378a6235c09e3614caf624ba6",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelSEI.time_setup_model": {
-        "code": "class TimeBuildModelSEI:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"SEI\", params)",
+        "code": "class TimeBuildModelSEI:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"SEI\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelSEI.time_setup_model",
         "number": 0,
@@ -115,11 +115,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "d712bc9a59370612798cbb7043cd2ef7477b9ee7df0546cac38242bd598ca18d",
+        "version": "72052d17c62d75ef9abff93a57e2fe2b8776f153d13317ba41c9304374cf3241",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelSurfaceForm.time_setup_model": {
-        "code": "class TimeBuildModelSurfaceForm:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"surface form\", params)",
+        "code": "class TimeBuildModelSurfaceForm:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"surface form\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelSurfaceForm.time_setup_model",
         "number": 0,
@@ -143,11 +143,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "1aa4c86af11cae5b0d40de18d782c6556c39a2c3b4359e25a29b0ff8bfce3de2",
+        "version": "0ae12c41f1ed5675d959bbc049a400985cf3ede740ee73c11075d7aa10f34e49",
         "warmup_time": -1
     },
     "different_model_options.TimeBuildModelThermal.time_setup_model": {
-        "code": "class TimeBuildModelThermal:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"thermal\", params)",
+        "code": "class TimeBuildModelThermal:\n    def time_setup_model(self, model, params):\n        build_model(\"Marquis2019\", model, \"thermal\", params)\n\n    def setup(self, _model, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "different_model_options.TimeBuildModelThermal.time_setup_model",
         "number": 0,
@@ -171,11 +171,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "498f169375ada7271622b725ddc648abd90553aa621b17a11893b6fbcf1a3c7f",
+        "version": "a350e87e4e8a8f35aeb9951c78518a60da6177951f7d81d09f3d3088ec055cfd",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveLithiumPlating.time_solve_model": {
-        "code": "class TimeSolveLithiumPlating:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"OKane2022\", model, \"lithium plating\", params, solver_class\n        )",
+        "code": "class TimeSolveLithiumPlating:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        SolveModel.solve_setup(\n            self, \"OKane2022\", model, \"lithium plating\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveLithiumPlating.time_solve_model",
         "number": 0,
@@ -205,11 +205,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "a7e921423ff12485f9191cadd13947c31710cf832f17da13ad68c5de2d0602ae",
+        "version": "b1d66b1656476391fd4f4a356b350bff995917103286317dffc403f2b8a90fbe",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveLossActiveMaterial.time_solve_model": {
-        "code": "class TimeSolveLossActiveMaterial:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Ai2020\", model, \"loss of active material\", params, solver_class\n        )",
+        "code": "class TimeSolveLossActiveMaterial:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        SolveModel.solve_setup(\n            self, \"Ai2020\", model, \"loss of active material\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveLossActiveMaterial.time_solve_model",
         "number": 0,
@@ -239,11 +239,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "c1dff76d9e08da716685373107680084f50ebfb24c147064023ae3dacb502e06",
+        "version": "d5e240fe84c4acc6966e4a3c4fd3b541659eb242ea36508a92c57a0ed958ceb7",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveParticle.time_solve_model": {
-        "code": "class TimeSolveParticle:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"particle\", params, solver_class\n        )",
+        "code": "class TimeSolveParticle:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"particle\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveParticle.time_solve_model",
         "number": 0,
@@ -273,11 +273,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "ac0ac4e14582d06dfa824e725b3727a5180a44001c838a983c6c41458c0f1027",
+        "version": "0fb24c2046b35533f49c825e1f5dbc32c30266f30c6ffc64504048df0f6182f7",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveSEI.time_solve_model": {
-        "code": "class TimeSolveSEI:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"SEI\", params, solver_class)",
+        "code": "class TimeSolveSEI:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        SolveModel.solve_setup(self, \"Marquis2019\", model, \"SEI\", params, solver_class)",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveSEI.time_solve_model",
         "number": 0,
@@ -310,11 +310,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "ae8aaf2c307ac32961fa5042f713258828cc71346da90c2364f4adb7320b2c2e",
+        "version": "53dd91bc8ea837141f3ff3ec6ae6fc8310b0ebfae08e6bbd8a1f692efb7d2f57",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveSurfaceForm.time_solve_model": {
-        "code": "class TimeSolveSurfaceForm:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        if (model, params, solver_class) == (\n            pybamm.lithium_ion.SPM,\n            \"differential\",\n            pybamm.IDAKLUSolver,\n        ):\n            raise NotImplementedError\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"surface form\", params, solver_class\n        )",
+        "code": "class TimeSolveSurfaceForm:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        if (model, params, solver_class) == (\n            pybamm.lithium_ion.SPM,\n            \"differential\",\n            pybamm.IDAKLUSolver,\n        ):\n            raise NotImplementedError\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"surface form\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveSurfaceForm.time_solve_model",
         "number": 0,
@@ -343,11 +343,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "b284405e56214e750ff79f8a73ba2af17787ac9f6621fceb93eabd94f54146d8",
+        "version": "b025abdf6ccd9f47388fd29f0bfc0fc5490bc48eb9c277ba6172b8064339cd15",
         "warmup_time": -1
     },
     "different_model_options.TimeSolveThermal.time_solve_model": {
-        "code": "class TimeSolveThermal:\n    def time_solve_model(self, model, params, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"thermal\", params, solver_class\n        )",
+        "code": "class TimeSolveThermal:\n    def time_solve_model(self, _model, _params, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, model, params, solver_class):\n        set_random_seed()\n        SolveModel.solve_setup(\n            self, \"Marquis2019\", model, \"thermal\", params, solver_class\n        )",
         "min_run_count": 2,
         "name": "different_model_options.TimeSolveThermal.time_solve_model",
         "number": 0,
@@ -376,11 +376,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "e13856f7f828f5e2f68e83317010aca0c728a0fbb5fb953b73da8739b742a12a",
+        "version": "b8015ca16fbe5a13c5d7b34926d92538382b9575c674f2ef78d923e8e603f5cb",
         "warmup_time": -1
     },
     "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV": {
-        "code": "class MemDFNSimulationCCCV:\n    def mem_setup_DFN_simulationCCCV(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "code": "class MemDFNSimulationCCCV:\n    def mem_setup_DFN_simulationCCCV(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.DFN()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim\n\n    def setup(self, _params):\n        set_random_seed()",
         "name": "memory_sims.MemDFNSimulationCCCV.mem_setup_DFN_simulationCCCV",
         "param_names": [
             "parameter"
@@ -393,10 +393,10 @@
         ],
         "type": "memory",
         "unit": "bytes",
-        "version": "dcfa286e2ee441d8889df80a96e4bc08a19dce1b0dcc06cff67db8871dde214c"
+        "version": "51ef613d1be3b3c97e5cff911f9a71ebfec58bb3741293e2b387b6aec0c55d88"
     },
     "memory_sims.MemDFNSimulationGITT.mem_setup_DFN_simulationGITT": {
-        "code": "class MemDFNSimulationGITT:\n    def mem_setup_DFN_simulationGITT(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "code": "class MemDFNSimulationGITT:\n    def mem_setup_DFN_simulationGITT(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim\n\n    def setup(self, _params):\n        set_random_seed()",
         "name": "memory_sims.MemDFNSimulationGITT.mem_setup_DFN_simulationGITT",
         "param_names": [
             "parameter"
@@ -409,10 +409,10 @@
         ],
         "type": "memory",
         "unit": "bytes",
-        "version": "19cf3b39382834a8cb86fab71ae7457cb9784ff4be59085c9fbef9fef541601f"
+        "version": "d4b526c693f63c0dca2afa82bc58c24d52b7884ae618e298aff74e44864d84e4"
     },
     "memory_sims.MemSPMSimulationCCCV.mem_setup_SPM_simulationCCCV": {
-        "code": "class MemSPMSimulationCCCV:\n    def mem_setup_SPM_simulationCCCV(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "code": "class MemSPMSimulationCCCV:\n    def mem_setup_SPM_simulationCCCV(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [\n                \"Discharge at C/5 for 10 hours or until 3.3 V\",\n                \"Rest for 1 hour\",\n                \"Charge at 1 A until 4.1 V\",\n                \"Hold at 4.1 V until 10 mA\",\n                \"Rest for 1 hour\",\n            ]\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim\n\n    def setup(self, _params):\n        set_random_seed()",
         "name": "memory_sims.MemSPMSimulationCCCV.mem_setup_SPM_simulationCCCV",
         "param_names": [
             "parameter"
@@ -425,10 +425,10 @@
         ],
         "type": "memory",
         "unit": "bytes",
-        "version": "4d487b81ebe806e06b74c7e8a4e5adf7d2d193a65b9904033b32df9b546a400b"
+        "version": "29109fbfa71fad4a6f5d5b2f57bb2c9d364602f218e44f5f537529aae441a717"
     },
     "memory_sims.MemSPMSimulationGITT.mem_setup_SPM_simulationGITT": {
-        "code": "class MemSPMSimulationGITT:\n    def mem_setup_SPM_simulationGITT(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim",
+        "code": "class MemSPMSimulationGITT:\n    def mem_setup_SPM_simulationGITT(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPM()\n        exp = pybamm.Experiment(\n            [(\"Discharge at C/20 for 1 hour\", \"Rest for 1 hour\")] * 20\n        )\n        self.sim = pybamm.Simulation(\n            self.model, parameter_values=self.param, experiment=exp\n        )\n        return self.sim\n\n    def setup(self, _params):\n        set_random_seed()",
         "name": "memory_sims.MemSPMSimulationGITT.mem_setup_SPM_simulationGITT",
         "param_names": [
             "parameter"
@@ -441,46 +441,100 @@
         ],
         "type": "memory",
         "unit": "bytes",
-        "version": "e795149bf5ef6de3f6a22e7aae87dee586fcfb2ad48f5567048499f946f84f6e"
+        "version": "c00f20a28b027b21fcddb41e38f4b6414026233b5484c1bc7a1ad2810fc0475f"
     },
     "memory_unit_benchmarks.MemCreateExpression.mem_create_expression": {
-        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model",
+        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model\n\n    def setup(self):\n        set_random_seed()",
         "name": "memory_unit_benchmarks.MemCreateExpression.mem_create_expression",
         "param_names": [],
         "params": [],
         "type": "memory",
         "unit": "bytes",
-        "version": "051d7dd69db532340a54137adc47187cb7fc1788330eeb474f50641a2202c9ff"
+        "version": "3d6830c6c8132d74fbf54e206a2f784c514c86ad079aac662a24cb151775927f"
+    },
+    "memory_unit_benchmarks.MemDiscretiseModel.mem_create_expression": {
+        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model\n\nclass MemDiscretiseModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)",
+        "name": "memory_unit_benchmarks.MemDiscretiseModel.mem_create_expression",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "1e1265e6812795c6b4638a8861b57dc14e9b3e21d54786009ba2f6ea6526eb99"
     },
     "memory_unit_benchmarks.MemDiscretiseModel.mem_discretise": {
-        "code": "class MemDiscretiseModel:\n    def mem_discretise(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n        return disc\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)",
+        "code": "class MemDiscretiseModel:\n    def mem_discretise(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n        return disc\n\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)",
         "name": "memory_unit_benchmarks.MemDiscretiseModel.mem_discretise",
         "param_names": [],
         "params": [],
         "type": "memory",
         "unit": "bytes",
-        "version": "161d1e865768e388bedfc8f24eec7c376ac9fef84acf0bdbcdaa583aca95ab68"
+        "version": "495195cd9a6ece265ad424338ffde8465bff6b401aff98f26bf908c480b58724"
+    },
+    "memory_unit_benchmarks.MemDiscretiseModel.mem_parameterise": {
+        "code": "class MemParameteriseModel:\n    def mem_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n        return param\n\nclass MemDiscretiseModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)",
+        "name": "memory_unit_benchmarks.MemDiscretiseModel.mem_parameterise",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "3193180de8abb381c009afe51426f5d20e7347c3b9761d1663a98425cce0c663"
+    },
+    "memory_unit_benchmarks.MemParameteriseModel.mem_create_expression": {
+        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model\n\nclass MemParameteriseModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)",
+        "name": "memory_unit_benchmarks.MemParameteriseModel.mem_create_expression",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "862863fcd24f0545f40184ecdebd166445846c611afed20dcf90f68765c3cc0b"
     },
     "memory_unit_benchmarks.MemParameteriseModel.mem_parameterise": {
-        "code": "class MemParameteriseModel:\n    def mem_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n        return param\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)",
+        "code": "class MemParameteriseModel:\n    def mem_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n        return param\n\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)",
         "name": "memory_unit_benchmarks.MemParameteriseModel.mem_parameterise",
         "param_names": [],
         "params": [],
         "type": "memory",
         "unit": "bytes",
-        "version": "d219da44966aae64a4ce98e5cfde0a0acedae4fdac3bcff12064b8d77fc7ef1a"
+        "version": "edad12bc03295b4e89366fc5cfb1ed396d7bb91d3f3c81c80c58aa1302e875c5"
+    },
+    "memory_unit_benchmarks.MemSolveModel.mem_create_expression": {
+        "code": "class MemCreateExpression:\n    def mem_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n        return self.model\n\nclass MemSolveModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
+        "name": "memory_unit_benchmarks.MemSolveModel.mem_create_expression",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "16091c4e58d10d32014c88300ed1dcaf80b55cf5b10e264a66a1ea2b8837581e"
+    },
+    "memory_unit_benchmarks.MemSolveModel.mem_discretise": {
+        "code": "class MemDiscretiseModel:\n    def mem_discretise(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n        return disc\n\nclass MemSolveModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
+        "name": "memory_unit_benchmarks.MemSolveModel.mem_discretise",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "34cbd7a52ecdcb0e943a83665c930436c4d296729f856ac0c74a38ebe551e0f9"
+    },
+    "memory_unit_benchmarks.MemSolveModel.mem_parameterise": {
+        "code": "class MemParameteriseModel:\n    def mem_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n        return param\n\nclass MemSolveModel:\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
+        "name": "memory_unit_benchmarks.MemSolveModel.mem_parameterise",
+        "param_names": [],
+        "params": [],
+        "type": "memory",
+        "unit": "bytes",
+        "version": "e4f639e8ddfb46ec7daa72247577a6c466daa157bef63aa013c20264f9da6a73"
     },
     "memory_unit_benchmarks.MemSolveModel.mem_solve": {
-        "code": "class MemSolveModel:\n    def mem_solve(self):\n        solver = pybamm.ScipySolver()\n        t = np.linspace(0, 3600, 600)\n        solver.solve(self.model, t)\n        return solver\n\n    def setup(self):\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
+        "code": "class MemSolveModel:\n    def mem_solve(self):\n        solver = pybamm.ScipySolver()\n        t = np.linspace(0, 3600, 600)\n        solver.solve(self.model, t)\n        return solver\n\n    def setup(self):\n        set_random_seed()\n        MemCreateExpression.mem_create_expression(self)\n        MemParameteriseModel.mem_parameterise(self)\n        MemDiscretiseModel.mem_discretise(self)",
         "name": "memory_unit_benchmarks.MemSolveModel.mem_solve",
         "param_names": [],
         "params": [],
         "type": "memory",
         "unit": "bytes",
-        "version": "0098dfcd1304100f58897a06d62ad61d924a646365de3706e91294f8d89943d3"
+        "version": "a7b39a512b545d84bd7d5f0a6ed4d6901e6dc414da7e50ed43c6afa3abd62f0a"
     },
     "time_setup_models_and_sims.TimeBuildDFN.time_setup_DFN": {
-        "code": "class TimeBuildDFN:\n    def time_setup_DFN(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)",
+        "code": "class TimeBuildDFN:\n    def time_setup_DFN(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.DFN()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)\n\n    def setup(self, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildDFN.time_setup_DFN",
         "number": 0,
@@ -506,11 +560,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "5294948f9d12b08e0ca91e872f066e08b04cc20a728431d490a7f389fb25d4cb",
+        "version": "0eee82eaa2ed6557bb7cec497b21c1595f4e2ab7f17c33cf98baa7acc53e6ef7",
         "warmup_time": -1
     },
     "time_setup_models_and_sims.TimeBuildDFNSimulation.time_setup_DFN_simulation": {
-        "code": "class TimeBuildDFNSimulation:\n    def time_setup_DFN_simulation(self, with_experiment, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.DFN()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)",
+        "code": "class TimeBuildDFNSimulation:\n    def time_setup_DFN_simulation(self, with_experiment, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.DFN()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)\n\n    def setup(self, _with_experiment, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildDFNSimulation.time_setup_DFN_simulation",
         "number": 0,
@@ -541,11 +595,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "bec1ef0368e5b10eb69f23a0228764e22ba74a9ce379a2d632fe081d9b554772",
+        "version": "041d84cc1adf4753d7f9652306ad60d0d6364fcc290e4736429f8e7c3c675a12",
         "warmup_time": -1
     },
     "time_setup_models_and_sims.TimeBuildSPM.time_setup_SPM": {
-        "code": "class TimeBuildSPM:\n    def time_setup_SPM(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)",
+        "code": "class TimeBuildSPM:\n    def time_setup_SPM(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPM()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)\n\n    def setup(self, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildSPM.time_setup_SPM",
         "number": 0,
@@ -571,11 +625,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "9cc0fc69309859c6bf4b82d51013e8fe94dd813b79bac34773123bfbe9575b69",
+        "version": "d5778345d68fd67c043a3241f1764d8b6e007490765cb577f15dd6fe38347cad",
         "warmup_time": -1
     },
     "time_setup_models_and_sims.TimeBuildSPMSimulation.time_setup_SPM_simulation": {
-        "code": "class TimeBuildSPMSimulation:\n    def time_setup_SPM_simulation(self, with_experiment, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPM()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)",
+        "code": "class TimeBuildSPMSimulation:\n    def time_setup_SPM_simulation(self, with_experiment, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPM()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)\n\n    def setup(self, _with_experiment, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildSPMSimulation.time_setup_SPM_simulation",
         "number": 0,
@@ -606,11 +660,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "dcc0e5a798b16647676f9beb1311bd07fcbd43b5f1445721dee62457345f84f0",
+        "version": "4af04a0ebcb83401d42904cefe3d57346161aa348bdafe191f95ec33fff21cec",
         "warmup_time": -1
     },
     "time_setup_models_and_sims.TimeBuildSPMe.time_setup_SPMe": {
-        "code": "class TimeBuildSPMe:\n    def time_setup_SPMe(self, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPMe()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)",
+        "code": "class TimeBuildSPMe:\n    def time_setup_SPMe(self, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPMe()\n        self.param.process_model(self.model)\n        compute_discretisation(self.model, self.param).process_model(self.model)\n\n    def setup(self, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildSPMe.time_setup_SPMe",
         "number": 0,
@@ -636,11 +690,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "42f066a302b7c7c0b8678546b480bc896e28faa8487a3ada7570e4b587d592db",
+        "version": "970230e78bb53f069b2e13856e844504c8a106f98359e1d7ad09161d6d03c083",
         "warmup_time": -1
     },
     "time_setup_models_and_sims.TimeBuildSPMeSimulation.time_setup_SPMe_simulation": {
-        "code": "class TimeBuildSPMeSimulation:\n    def time_setup_SPMe_simulation(self, with_experiment, parameters):\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = pybamm.lithium_ion.SPMe()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)",
+        "code": "class TimeBuildSPMeSimulation:\n    def time_setup_SPMe_simulation(self, with_experiment, params):\n        self.param = pybamm.ParameterValues(params)\n        self.model = pybamm.lithium_ion.SPMe()\n        if with_experiment:\n            exp = pybamm.Experiment(\n                [\n                    \"Discharge at 0.1C until 3.105 V\",\n                ]\n            )\n            pybamm.Simulation(self.model, parameter_values=self.param, experiment=exp)\n        else:\n            pybamm.Simulation(self.model, parameter_values=self.param, C_rate=1)\n\n    def setup(self, _with_experiment, _params):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "time_setup_models_and_sims.TimeBuildSPMeSimulation.time_setup_SPMe_simulation",
         "number": 0,
@@ -671,11 +725,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "fa33f32dc52b29c7d15644fc09b82fa83412d56629204948b3a5291eb4d299d7",
+        "version": "6f76c516f3fa71f22c3c769426712e12bc3c63681def5407f510a3d24fe28ebf",
         "warmup_time": -1
     },
     "time_sims_experiments.TimeSimulation.time_setup": {
-        "code": "class TimeSimulation:\n    def time_setup(self, experiment, parameters, model_class, solver_class):\n        param = pybamm.ParameterValues(parameters)\n        model = model_class()\n        solver = solver_class()\n        exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        pybamm.Simulation(model, parameter_values=param, experiment=exp, solver=solver)\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
+        "code": "class TimeSimulation:\n    def time_setup(self, experiment, parameters, model_class, solver_class):\n        param = pybamm.ParameterValues(parameters)\n        model = model_class()\n        solver = solver_class()\n        exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        pybamm.Simulation(model, parameter_values=param, experiment=exp, solver=solver)\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        set_random_seed()\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
         "min_run_count": 2,
         "name": "time_sims_experiments.TimeSimulation.time_setup",
         "number": 0,
@@ -708,11 +762,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "70bb63e00480334e8fb1ebab75ebd483d2e781180b0c106d2217583902b2f268",
+        "version": "f919a29c04da89b51fb66aa41294744b714b2d640df50debeff76b55023af868",
         "warmup_time": -1
     },
     "time_sims_experiments.TimeSimulation.time_solve": {
-        "code": "class TimeSimulation:\n    def time_solve(self, experiment, parameters, model_class, solver_class):\n        self.sim.solve()\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
+        "code": "class TimeSimulation:\n    def time_solve(self, _experiment, _parameters, _model_class, _solver_class):\n        self.sim.solve()\n\n    def setup(self, experiment, parameters, model_class, solver_class):\n        set_random_seed()\n        if (experiment, parameters, model_class, solver_class) == (\n            \"GITT\",\n            \"Marquis2019\",\n            pybamm.lithium_ion.DFN,\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.param = pybamm.ParameterValues(parameters)\n        self.model = model_class()\n        self.solver = solver_class()\n        self.exp = pybamm.Experiment(self.experiment_descriptions[experiment])\n        self.sim = pybamm.Simulation(\n            self.model,\n            parameter_values=self.param,\n            experiment=self.exp,\n            solver=self.solver,\n        )",
         "min_run_count": 2,
         "name": "time_sims_experiments.TimeSimulation.time_solve",
         "number": 0,
@@ -745,11 +799,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "5581bd492a800415d9c6a1a381d87fcbc56564996b9d82ebe0f0c9b7518cc948",
+        "version": "6832512fe2709d359717d531b49d57f9b07241e3af646c02a9865a7e7b4c96ac",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveDFN.time_solve_model": {
-        "code": "class TimeSolveDFN:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        if (parameters, solver_class) == (\n            \"ORegan2022\",\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
+        "code": "class TimeSolveDFN:\n    def time_solve_model(self, _solve_first, _parameters, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        set_random_seed()\n        if (parameters, solver_class) == (\n            \"ORegan2022\",\n            pybamm.CasadiSolver,\n        ):\n            raise NotImplementedError\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.DFN()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveDFN.time_solve_model",
         "number": 0,
@@ -782,11 +836,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "2f249ee7769f90524c47792571e7fe7ffdbef508d9090cc00ede84a16dc8d177",
+        "version": "f6d7b52e57b2a72e7ebdf55b8998c7f7e4ee88848570e445a0f7bd967d6d14be",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveSPM.time_solve_model": {
-        "code": "class TimeSolveSPM:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPM()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
+        "code": "class TimeSolveSPM:\n    def time_solve_model(self, _solve_first, _parameters, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        set_random_seed()\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPM()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveSPM.time_solve_model",
         "number": 0,
@@ -819,11 +873,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "585652f5d88e12033cb4a7e8624f0289ddbc9e33d255c8022ff613a2e1acdf74",
+        "version": "f329b803e6760b144e33d59c3d34fa3d75fa6c26427168501d81c48156c62175",
         "warmup_time": -1
     },
     "time_solve_models.TimeSolveSPMe.time_solve_model": {
-        "code": "class TimeSolveSPMe:\n    def time_solve_model(self, solve_first, parameters, solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPMe()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
+        "code": "class TimeSolveSPMe:\n    def time_solve_model(self, _solve_first, _parameters, _solver_class):\n        self.solver.solve(self.model, t_eval=self.t_eval)\n\n    def setup(self, solve_first, parameters, solver_class):\n        set_random_seed()\n        self.solver = solver_class()\n        self.model = pybamm.lithium_ion.SPMe()\n        c_rate = 1\n        tmax = 4000 / c_rate\n        nb_points = 500\n        self.t_eval = np.linspace(0, tmax, nb_points)\n        geometry = self.model.default_geometry\n    \n        # load parameter values and process model and geometry\n        param = pybamm.ParameterValues(parameters)\n        param.process_model(self.model)\n        param.process_geometry(geometry)\n    \n        # set mesh\n        var_pts = {\n            \"x_n\": 20,\n            \"x_s\": 20,\n            \"x_p\": 20,\n            \"r_n\": 30,\n            \"r_p\": 30,\n            \"y\": 10,\n            \"z\": 10,\n        }\n        mesh = pybamm.Mesh(geometry, self.model.default_submesh_types, var_pts)\n    \n        # discretise model\n        disc = pybamm.Discretisation(mesh, self.model.default_spatial_methods)\n        disc.process_model(self.model)\n        if solve_first:\n            solve_model_once(self.model, self.solver, self.t_eval)",
         "min_run_count": 2,
         "name": "time_solve_models.TimeSolveSPMe.time_solve_model",
         "number": 0,
@@ -856,11 +910,11 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "29fa52398e50081bc33cbf7c010649649e82aa3b26e967430dba19d70ca80712",
+        "version": "26110b628fab649e6153a529860b3104b379d3f288ca020d4321f489c8a38955",
         "warmup_time": -1
     },
     "unit_benchmarks.TimeCreateExpression.time_create_expression": {
-        "code": "class TimeCreateExpression:\n    def time_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }",
+        "code": "class TimeCreateExpression:\n    def time_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n\n    def setup(self):\n        set_random_seed()",
         "min_run_count": 2,
         "name": "unit_benchmarks.TimeCreateExpression.time_create_expression",
         "number": 0,
@@ -871,11 +925,26 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "d50f4d23b4da39a89763df3a16060d53690898d238986a03d1867d86fdd8baf6",
+        "version": "79567e8fc10e82bb7efc93e89a5fa48101c5f63b2bcf09f9affa1daeaa660a7a",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeDiscretiseModel.time_create_expression": {
+        "code": "class TimeCreateExpression:\n    def time_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n\nclass TimeDiscretiseModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeDiscretiseModel.time_create_expression",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "53f64bb63b703ce09229d62a777fa5f21abf561c70430ff978cd6fce8363f76c",
         "warmup_time": -1
     },
     "unit_benchmarks.TimeDiscretiseModel.time_discretise": {
-        "code": "class TimeDiscretiseModel:\n    def time_discretise(self):\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n\n    def setup(self):\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)",
+        "code": "class TimeDiscretiseModel:\n    def time_discretise(self):\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)",
         "min_run_count": 2,
         "name": "unit_benchmarks.TimeDiscretiseModel.time_discretise",
         "number": 0,
@@ -886,11 +955,41 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "4fbfe1ce99553daa3ea65f929308b968644f29f5a930c12c92505465fb85c788",
+        "version": "82d1028bb6552573a282aead5ecf23b4c233624a98d553f417f9b632904cf779",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeDiscretiseModel.time_parameterise": {
+        "code": "class TimeParameteriseModel:\n    def time_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n\nclass TimeDiscretiseModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeDiscretiseModel.time_parameterise",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "ef8b306be418ea6cffb6df7d95c34e6e4c058556b81285cfe00a85a746364e11",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeParameteriseModel.time_create_expression": {
+        "code": "class TimeCreateExpression:\n    def time_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n\nclass TimeParameteriseModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeParameteriseModel.time_create_expression",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "c9c6590d7ea983ffd2ec4a0beb7198254c9872b5d79fafe982b5575dcbf533ea",
         "warmup_time": -1
     },
     "unit_benchmarks.TimeParameteriseModel.time_parameterise": {
-        "code": "class TimeParameteriseModel:\n    def time_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n\n    def setup(self):\n        TimeCreateExpression.time_create_expression(self)",
+        "code": "class TimeParameteriseModel:\n    def time_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)",
         "min_run_count": 2,
         "name": "unit_benchmarks.TimeParameteriseModel.time_parameterise",
         "number": 0,
@@ -901,11 +1000,56 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "58d52171a131f2e05d1ca3d07e0a65d958c048aa8fe7d01aa04959f95800017d",
+        "version": "2db8360d2edcfa78dd7840bfc00d24c0e9649c847253c89fe402671c262b1338",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeSolveModel.time_create_expression": {
+        "code": "class TimeCreateExpression:\n    def time_create_expression(self):\n        self.R = pybamm.Parameter(\"Particle radius [m]\")\n        D = pybamm.Parameter(\"Diffusion coefficient [m2.s-1]\")\n        j = pybamm.Parameter(\"Interfacial current density [A.m-2]\")\n        F = pybamm.Parameter(\"Faraday constant [C.mol-1]\")\n        c0 = pybamm.Parameter(\"Initial concentration [mol.m-3]\")\n        self.model = pybamm.BaseModel()\n    \n        c = pybamm.Variable(\"Concentration [mol.m-3]\", domain=\"negative particle\")\n        N = -D * pybamm.grad(c)\n        dcdt = -pybamm.div(N)\n        self.model.rhs = {c: dcdt}\n    \n        lbc = pybamm.Scalar(0)\n        rbc = -j / F / D\n        self.model.boundary_conditions = {\n            c: {\"left\": (lbc, \"Neumann\"), \"right\": (rbc, \"Neumann\")}\n        }\n    \n        self.model.initial_conditions = {c: c0}\n        self.model.variables = {\n            \"Concentration [mol.m-3]\": c,\n            \"Surface concentration [mol.m-3]\": pybamm.surf(c),\n            \"Flux [mol.m-2.s-1]\": N,\n        }\n\nclass TimeSolveModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        TimeDiscretiseModel.time_discretise(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeSolveModel.time_create_expression",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "7d5ffee2c28dcaa231b44408496fce54271121737b80dc5a7498beb92ab2b159",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeSolveModel.time_discretise": {
+        "code": "class TimeDiscretiseModel:\n    def time_discretise(self):\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        submesh_types = {\"negative particle\": pybamm.Uniform1DSubMesh}\n        var_pts = {self.r: 20}\n        mesh = pybamm.Mesh(self.geometry, submesh_types, var_pts)\n    \n        spatial_methods = {\"negative particle\": pybamm.FiniteVolume()}\n        disc = pybamm.Discretisation(mesh, spatial_methods)\n        disc.process_model(self.model)\n\nclass TimeSolveModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        TimeDiscretiseModel.time_discretise(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeSolveModel.time_discretise",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "a4e41d181f7a8ac4c6c873e0aafa291f45deb155ad92dc625301917565fe6bdc",
+        "warmup_time": -1
+    },
+    "unit_benchmarks.TimeSolveModel.time_parameterise": {
+        "code": "class TimeParameteriseModel:\n    def time_parameterise(self):\n        param = pybamm.ParameterValues(\n            {\n                \"Particle radius [m]\": 10e-6,\n                \"Diffusion coefficient [m2.s-1]\": 3.9e-14,\n                \"Interfacial current density [A.m-2]\": 1.4,\n                \"Faraday constant [C.mol-1]\": 96485,\n                \"Initial concentration [mol.m-3]\": 2.5e4,\n            }\n        )\n    \n        self.r = pybamm.SpatialVariable(\n            \"r\", domain=[\"negative particle\"], coord_sys=\"spherical polar\"\n        )\n    \n        self.geometry = {\n            \"negative particle\": {self.r: {\"min\": pybamm.Scalar(0), \"max\": self.R}}\n        }\n        param.process_model(self.model)\n        param.process_geometry(self.geometry)\n\nclass TimeSolveModel:\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        TimeDiscretiseModel.time_discretise(self)",
+        "min_run_count": 2,
+        "name": "unit_benchmarks.TimeSolveModel.time_parameterise",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "14eb896be95381d740fa3f69396eb480514a09da23f2525bce6c81124247ca72",
         "warmup_time": -1
     },
     "unit_benchmarks.TimeSolveModel.time_solve": {
-        "code": "class TimeSolveModel:\n    def time_solve(self):\n        solver = pybamm.ScipySolver()\n        t = np.linspace(0, 3600, 600)\n        solver.solve(self.model, t)\n\n    def setup(self):\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        TimeDiscretiseModel.time_discretise(self)",
+        "code": "class TimeSolveModel:\n    def time_solve(self):\n        solver = pybamm.ScipySolver()\n        t = np.linspace(0, 3600, 600)\n        solver.solve(self.model, t)\n\n    def setup(self):\n        set_random_seed()\n        TimeCreateExpression.time_create_expression(self)\n        TimeParameteriseModel.time_parameterise(self)\n        TimeDiscretiseModel.time_discretise(self)",
         "min_run_count": 2,
         "name": "unit_benchmarks.TimeSolveModel.time_solve",
         "number": 0,
@@ -916,7 +1060,7 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "f55331e31db8421a38d5fc1cae40690d1af2dfe4dbbcfbbcf716519cf3ff2946",
+        "version": "3b060ae2823c304802df15803cd5d845699526f2b740e5e252d5890f61967a01",
         "warmup_time": -1
     },
     "version": 2
